@@ -17,8 +17,8 @@ import {
   SVELTE_FILE_PATTERNS,
   TEST_FILE_PATTERNS,
   TYPESCRIPT_DECLARATION_FILE_PATTERNS,
-} from './utils/patterns.js';
-import { convertErrorsToWarnings } from './util/utils.js';
+} from './util/patterns.mjs';
+import { convertErrorsToWarnings } from './util/utils.mjs';
 
 export default tseslint.config(
   {

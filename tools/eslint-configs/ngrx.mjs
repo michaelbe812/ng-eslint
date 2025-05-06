@@ -2,8 +2,8 @@
 
 import ngrx from '@ngrx/eslint-plugin';
 import tseslint from 'typescript-eslint';
-import { TYPESCRIPT_FILE_PATTERNS } from './util/patterns.js';
-import angular from './angular.js';
+import { TYPESCRIPT_FILE_PATTERNS } from './util/patterns.mjs';
+import angular from './angular.mjs';
 
 export default tseslint.config(...angular, {
   files: TYPESCRIPT_FILE_PATTERNS,

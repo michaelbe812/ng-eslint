@@ -2,7 +2,7 @@
 
 import cypress from 'eslint-plugin-cypress/flat';
 import tseslint from 'typescript-eslint';
-import { CYPRESS_FILE_PATTERNS } from './util/patterns.js';
+import { CYPRESS_FILE_PATTERNS } from './util/patterns.mjs';
 
 export default tseslint.config({
   files: CYPRESS_FILE_PATTERNS,

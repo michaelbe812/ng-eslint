@@ -1,5 +1,5 @@
 import tseslint from 'typescript-eslint';
-import { TYPESCRIPT_FILE_PATTERNS, TEST_FILE_PATTERNS } from './util/patterns.js';
+import { TYPESCRIPT_FILE_PATTERNS, TEST_FILE_PATTERNS } from './util/patterns.mjs';
 import globals from "globals";
 import jasmine from 'eslint-plugin-jasmine';
 

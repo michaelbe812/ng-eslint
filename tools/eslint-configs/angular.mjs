@@ -13,12 +13,12 @@ import {
   TEST_FILE_PATTERNS,
   TEST_FILE_PATTERNS_INLINE_TEMPLATES,
   TYPESCRIPT_FILE_PATTERNS,
-} from './util/patterns.js';
+} from './util/patterns.mjs';
 import {
   NAMING_CONVENTION_OPTIONS_ANGULAR,
   NAMING_CONVENTION_OPTIONS_STORYBOOK,
-} from './util/rule-options.js';
-import typescript from './typescript.js';
+} from './util/rule-options.mjs';
+import typescript from './typescript.mjs';
 
 export default tseslint.config(
   ...typescript,
@@ -32,6 +32,10 @@ export default tseslint.config(
     processor: angular.processInlineTemplates,
     languageOptions: {
       globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname
+      }
     },
     extends: [
       ...angular.configs.tsRecommended,

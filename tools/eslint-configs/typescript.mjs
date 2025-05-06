@@ -8,18 +8,24 @@ import {
   STORYBOOK_FILE_PATTERNS,
   TEST_FILE_PATTERNS,
   TYPESCRIPT_FILE_PATTERNS,
-} from './util/patterns.js';
+} from './util/patterns.mjs';
 import {
   IMMUTABLE_DATA_OPTIONS,
   NAMING_CONVENTION_OPTIONS,
   NAMING_CONVENTION_OPTIONS_STORYBOOK,
-} from './util/rule-options.js';
-import javascript from './javascript.js';
+} from './util/rule-options.mjs';
+import javascript from './javascript.mjs';
 
 export default tseslint.config(
   ...javascript,
   {
     files: TYPESCRIPT_FILE_PATTERNS,
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname
+      }
+    },
     extends: [
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.strictTypeChecked,

@@ -12,5 +12,8 @@ export default tseslint.config({
   },
   plugins: {
     jasmine
+  },
+  rules: {
+  "jasmine/no-disabled-tests": "error",
   }
 })

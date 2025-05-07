@@ -1,18 +1,20 @@
 // @ts-check
 // import eslint from "@eslint/js"
-import tseslint from "typescript-eslint"
+import tseslint from "typescript-eslint";
 // import angular from "angular-eslint";
-import typescript from "./tools/eslint-configs/typescript.mjs"
-import angular from "./tools/eslint-configs/angular.mjs"
-import ngrx from "./tools/eslint-configs/ngrx.mjs"
-import jasmin from "./tools/eslint-configs/jasmine.mjs"
+import typescript from "./tools/eslint-configs/typescript.mjs";
+import angular from "./tools/eslint-configs/angular.mjs";
+import ngrx from "./tools/eslint-configs/ngrx.mjs";
+import jasmin from "./tools/eslint-configs/jasmine.mjs";
+import modernAngular from "./tools/eslint-configs/modern-angular.config.mjs";
 
 export default tseslint.config(
-  ...typescript,
-  ...angular,
-  ...ngrx,
-  ...jasmin,
-)
+  //...typescript,
+  //...angular,
+  //...ngrx,
+  //...jasmin,
+  ...modernAngular.minimal,
+);
 
 // export default tseslint.config(
 //   {
